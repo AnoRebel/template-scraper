@@ -130,6 +130,8 @@ def pagnum(urls):
 for region in regions:
     for gender in schoolgen:
         for typ in schooltyp:
+           print('Starting scraping: ')
+           print('.........')
             if region is regions[0]:
                 for district in Arusha:
                     urls = "http://www.schoolsinfo.co.tz/?Page=" + str(
@@ -138,8 +140,6 @@ for region in regions:
                     for pgno in range(pagnum(urls)):
                         urls = "http://www.schoolsinfo.co.tz/?Page=" + str(
                             1) + "&region=" + region + "&district=" + district + "&gender=" + gender + "&status=" + typ
-                        print('Starting scraping: ')
-                        print('.........')
                         scrape(urls)
                         time.sleep(1)
 
