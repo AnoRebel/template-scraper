@@ -2,25 +2,16 @@
 
 ########################################################################################################################
 # This little code scrapes all Tanzanian schools, primary and secondary and saving it
-# in Mongodb for later use
+# in a .json file for later use
 #
 # author = Adam Salehe
 #
-# This program is written in pure python 3.5.2, and uses, bs4, lxml, pymongo, requests(or urllib2)
-# the requisites are the above mention, and you need the MongoDB installed in your system
+# This program is written in pure python 3.5.2, and uses, bs4, lxml, json, requests(or urllib2)
+# the requisites are the above mention.
 #
 # questions = hacker4rebel@gmail.com
 #
 # created on 26/03/2017
-#
-# I used [mongoDB](http://www.mongodb.org/) along with [Pymongo](http://api.mongodb.org/python/current/)
-#
-# Before we start let's see what Wikipedia has to say about MongoDB:
-#
-# > "MongoDB (from "humongous") is an open source document-oriented database system developed and supported by 10gen. It
-#  is part of the NoSQL family of database systems. Instead of storing data in tables as is done in a "classical"
-#  relational database, MongoDB stores structured data as JSON-like documents with dynamic schemas (MongoDB calls the
-#  format BSON), making the integration of data in certain types of applications easier and faster
 #
 # You can use this as a template for any scraping project using beautifulsoup4 and lxml
 # this works even for a beginner coz its a step by step program
