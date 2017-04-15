@@ -257,7 +257,7 @@ def pagnump(urls):
 # it 1st loops the schools
 for school in all_schools:
     # then checks for appropriate value
-    print('Starting with Primary schools now: ')
+    print('Scraping primary schools into primary.json now: ')
     print('..........')
     if school is 'primary':
         # this is a nested loop for the actual values, that is, region, then district then page no.
@@ -273,8 +273,6 @@ for school in all_schools:
                         urls = "http://www.schoolsinfo.co.tz/?SchType=primary&Page=" + str(
                             pgno + 1) + "&region=" + region + "&district=" + district
                         # print(urls)
-                        print('Scraping primary schools into primary.json now: ')
-                        print('..........')
                         scrapep(urls)
                         time.sleep(1)
 
@@ -559,7 +557,9 @@ for school in all_schools:
 
     # this checks for appropriate value also.
     print('Going on with Secondary schools now: ')
-    print('..........')
+    print('')
+    print('Scraping secondary schools to secondary.json now: ')
+    print('.............')
     if school is 'secondary':
         # this is a nested loop for the actual values, that is, region, gender, type, then district then page no.
         for region in regions:
@@ -576,8 +576,6 @@ for school in all_schools:
                                 urls = "http://www.schoolsinfo.co.tz/?Page=" + str(
                                     1) + "&region=" + region + "&district=" + district + "&gender=" + gender + "&status=" + typ
                                 # print(urls)
-                                print('Scraping secondary schools to secondary.json now: ')
-                                print('.............')
                                 scrapes(urls)
                                 time.sleep(1)
 
