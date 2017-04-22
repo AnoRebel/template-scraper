@@ -65,21 +65,24 @@ def scrape(urls):
     for i in range(len(tables)):
         table_rows = tables[i].select('tr')
 
-        td['Name'] = table_rows[0].findAll('td')[0].text.strip()
+        td['school_name'] = table_rows[0].findAll('td')[0].text.strip()
 
-        td['Level'] = table_rows[2].findAll('td')[2].text.strip()
+        td['school_number'] = table_rows[1].findAll('td')[2].text.strip()
 
-        td['District'] = table_rows[3].findAll('td')[2].text.strip()
+        td['school_level'] = table_rows[2].findAll('td')[2].text.strip()
 
-        td['Region'] = table_rows[4].findAll('td')[2].text.strip()
+        td['district'] = table_rows[3].findAll('td')[2].text.strip()
 
-        td['Gender'] = gender
+        td['region'] = table_rows[4].findAll('td')[2].text.strip()
 
-        td['Type'] = typ
+        td['gender'] = gender
 
-        print('{0}, {1}'.format(td['Name'], td['Level']))
-        print('{0}, {1}'.format(td['Region'], td['District']))
-        print('{0}, {1}'.format(td['Gender'], td['Type']))
+        td['school_type'] = typ
+
+        print('{0}, {1}'.format(td['school_name'], td['school_number']))
+        print('{0}'.format(td['school_level']))
+        print('{0}, {1}'.format(td['region'], td['district']))
+        print('{0}, {1}'.format(td['gender'], td['school_type']))
 
         print('Creating and Opening an append file to dump the data in a JSON format:secondary.json')
         print('.............')
